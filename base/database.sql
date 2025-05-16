@@ -9,14 +9,13 @@ show databases;
 # Para trabaja en la base de Datos
 use formulario_api;
 
-create table ciudades(
-id  int auto_increment primary key,
-nombre varchar(200) not null,
-descripcion text null,
+
+create table Ciudades (
+id_ciudades int auto_increment,
+nombre_ciudades varchar (20),
 create_at timestamp default current_timestamp, #Crear tiempo genera de la base de Datos
-updated_at timestamp default current_timestamp on update current_timestamp 
-# la base de datos se actulizarar como metodo final 
-);
+updated_at timestamp default current_timestamp on update current_timestamp,
+primary key (id_ciudades));
 
 create table Generos (
 id_genero int auto_increment,
