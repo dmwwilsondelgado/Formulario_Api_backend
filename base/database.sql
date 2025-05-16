@@ -28,14 +28,19 @@ id_lenguaje int auto_increment ,
 nombre_lenguaje varchar(20),
 primary key(id_lenguaje));
 
-create table productos(
- id int auto_increment primary key,
- nombre varchar(250) not null,
- descripcion text,
- precio decimal(10,2),
- categoria_id int,
- create_at timestamp default current_timestamp, #Crear tiempo genera de la base de Datos
- updated_at timestamp default current_timestamp on update current_timestamp ,
- foreign key (categoria_id) references categorias(id) on delete set null
- # Cuanod eliminemos la categoria que el campo se vuelva nulo 
+
+create table Usuarios(
+id_usuario int auto_increment,
+nombre varchar(20),
+apellido varchar(20),
+correo varchar(20),
+fecha_nacimiento date,
+id_genero int,
+id_ciudades int,
+primary key(id_usuario),
+foreign key  (id_genero) references generos(id_genero),
+foreign key (id_ciudades) references ciudades(id_ciudades),
+create_at timestamp default current_timestamp, #Crear tiempo genera de la base de Datos
+updated_at timestamp default current_timestamp on update current_timestamp 
 );
+
