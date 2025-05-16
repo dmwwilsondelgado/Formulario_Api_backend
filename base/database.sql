@@ -23,10 +23,11 @@ nombre_genero varchar(20),
 primary key (id_genero));
 
 
-create table habilidades(
-id int auto_increment primary key,
+create table lenguajes(
+id_lenguaje int auto_increment ,
+nombre_lenguaje varchar(20),
+primary key(id_lenguaje));
 
-); 
 create table productos(
  id int auto_increment primary key,
  nombre varchar(250) not null,
