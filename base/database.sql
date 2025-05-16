@@ -18,11 +18,16 @@ updated_at timestamp default current_timestamp on update current_timestamp
 # la base de datos se actulizarar como metodo final 
 );
 
-create table generos(
+create table Generos (
+id_genero int auto_increment,
+nombre_genero varchar(20),
+primary key (id_genero));
+
+
+create table habilidades(
 id int auto_increment primary key,
-nombre varchar(255),
-genero enum('masculino','femenino')
-);
+
+); 
 create table productos(
  id int auto_increment primary key,
  nombre varchar(250) not null,
