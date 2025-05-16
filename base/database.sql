@@ -44,3 +44,9 @@ create_at timestamp default current_timestamp, #Crear tiempo genera de la base d
 updated_at timestamp default current_timestamp on update current_timestamp 
 );
 
+create table lenguajes_usuarios(
+id_usuario int ,
+id_lenguaje int,
+foreign key (id_usuario)references usuarios(id_usuario),
+foreign key (id_lenguaje)references lenguaje(id_lenguaje)
+);
