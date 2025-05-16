@@ -9,7 +9,7 @@ show databases;
 # Para trabaja en la base de Datos
 use formulario_api;
 
-create table categorias(
+create table ciudades(
 id  int auto_increment primary key,
 nombre varchar(200) not null,
 descripcion text null,
@@ -18,7 +18,11 @@ updated_at timestamp default current_timestamp on update current_timestamp
 # la base de datos se actulizarar como metodo final 
 );
 
-
+create table generos(
+id int auto_increment primary key,
+nombre varchar(255),
+genero enum('masculino','femenino')
+);
 create table productos(
  id int auto_increment primary key,
  nombre varchar(250) not null,
