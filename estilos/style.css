@@ -1,0 +1,170 @@
+@import url(root.css);
+*{
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Jua', sans-serif;
+     
+}
+body{
+    background-color:var(--color__principal) ;
+   
+}
+.header__bloque{
+    width: 100%;
+    background-color: #666;
+    height: 20px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.header{
+    width: 100%;
+    background-color: var(--color__header);
+    height: 90px;
+    display: flex;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.content__header{
+    display: flex;
+    width: 50%;
+    margin:0 auto;
+}
+.navega__links{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+}
+.navega__link{
+   list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+}
+.links{
+    text-decoration: none;
+    font-size: 2vw;
+}
+.links:hover{
+    width: 100%;
+    background-color:var(--color__principal);
+    border: 1px dashed;
+    color: #000;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 20px;
+}
+.content__textos{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+   /* -------------formulario -------- */
+.content__form{
+    margin: 0 auto;
+    width: 35%;  
+    background-color: var(--color__header);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+ 
+}
+
+.formulario__title{
+    font-size: 25px;
+    text-align: center;
+}
+.content__inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid transparent;
+    
+}
+.campo_input{
+    width: 100%;
+    text-align: center;
+    height: 2vw;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+    
+}
+
+.campos_seleccion{
+    width: 35%;
+    text-align: center;
+    height: 2vw;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+}
+.radio__title{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.radios__formulario{
+    align-items: center;
+    margin: 2px;
+}
+.content__check{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+.check__title{
+    font-size: 20px;
+   
+}
+
+.checkbox__lenguaje{
+  width: 20px;
+}
+.content__politicas{
+    display: flex;
+    width: 50%;
+    text-align: center;
+    margin:  0 auto ;
+    margin-top: 10px;
+   
+}
+.form__buton{
+   width: 50%;
+  display: block;
+   margin: 0 auto;
+  border: none;
+  font-size: 20px;
+  border-radius: 20px;
+}
+.form__buton:hover{
+    background-color: #666;
+    border: 1px groove;
+    color: var(--color__principal);
+    margin-top: 10px;
+    padding: 2px;
+}
+.cajita{
+    width: 40%;
+    display: flex;
+   flex-direction: column;
+   text-align: center ;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.input__border{
+  color: red;
+}
+.span{
+  text-align: center;
+  margin-left: 20px;
+  color: var(--color__principal);
+}

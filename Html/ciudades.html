@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciudades</title>
+    <link rel="stylesheet" href="/estilos/style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+</head>
+<body>
+ <div class="header__bloque">
+    </div>
+    <header class="header">
+        <div class="content__header">
+            <nav class="navega__links">
+                <ul class="navega__link">
+                    <li><a href="ciudades.html" class="links">Ciudades</a></li>
+                    <li><a href="generos.html" class="links">Generos</a></li>
+                    <li><a href="habilidades.html " class="links">habilidades</a></li>
+                    <li><a href="usuarios.html" class="links">Usuario</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="cajita">
+        <h4>selecciona tu ciudad :</h4>
+        <div class="content__inputs">
+            <select name="ciudad" id="ciudad" class="campos_seleccion">
+                <option >selecciona</option>
+            <option value="1">Bucaramanga </option>
+                <option value="2">giron</option>
+                <option value="3">florida</option>
+            </select>    
+       </div>
+        <button type="submit" id="btn_validar" class="form__buton">Guardar</button>
+    </div>
+
+    <div>
+      <table class="tablita">
+        <th>
+          <tr>id</tr>
+          <tr>nombre ciudad</tr>
+        </th>
+        <tbody></tbody>
+      </table>
+    </div>
+   
+   
+
+</body>
+</html>
