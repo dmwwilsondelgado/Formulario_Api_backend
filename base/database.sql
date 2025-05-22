@@ -63,3 +63,4 @@ insert into Ciudades (nombre_ciudades) values ('Girón'), ('Piedecuesta'),('Buca
 insert into Generos (nombre_genero) values ('Masculino'),('Femenino'),('Otros');
 insert into lenguajes (nombre_lenguaje) values('JS'),('MYSQL'),('PHYTON'),('HTML'),('PHP');
 insert into Usuarios (nombre,apellido,correo,fecha_nacimiento,id_genero,id_ciudades) values("wilson","delgado","wilsondel@gmail.com","2004-11-07","2","3");
+insert into Usuarios (nombre,apellido,correo,fecha_nacimiento,id_genero,id_ciudades) values("estefani","estupiñan","eestefani@gmail.com","2004-11-07","2","3");
