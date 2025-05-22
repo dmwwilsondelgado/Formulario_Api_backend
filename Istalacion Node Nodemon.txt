@@ -2,7 +2,7 @@ npm init -y
 
 npm install json-server@0.17.4
 
-npm i mysql12
+npm install --save mysql2
 
 npm i express
 
