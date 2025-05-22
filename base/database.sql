@@ -57,3 +57,6 @@ id_lenguaje int,
 foreign key (id_usuario)references usuarios(id_usuario),
 foreign key (id_lenguaje)references lenguajes(id_lenguaje)
 );
+
+
+insert into Ciudades (nombre_ciudades) values ('Girón'), ('Piedecuesta'),('Bucaramanga'),('Lebrija'),('Floridablanca');
