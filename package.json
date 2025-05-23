@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js" 
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "body-parser": "^2.2.0",
     "express": "^5.1.0",
@@ -17,5 +16,14 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmwwilsondelgado/Formulario_Api_backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dmwwilsondelgado/Formulario_Api_backend/issues"
+  },
+  "homepage": "https://github.com/dmwwilsondelgado/Formulario_Api_backend#readme",
+  "description": ""
 }
