@@ -7,6 +7,8 @@ const telefono = document.querySelector('[name="telefono"]');
 const documento = document.querySelector('[name="documento"]');
 const usuario = document.querySelector('[name="usuario"]');
 const contrasena = document.querySelector('[name="contrasena"]');
+const ciudades=document.querySelector('[name="ciudades"]');
+const generos=document.querySelector('[name=genero]')
 const codiciones = document.querySelector("#permisos");
 const boton = document.querySelector("btn_guardar");
 
@@ -35,3 +37,5 @@ codiciones.addEventListener("DOMContentLoaded", (event) => {
     boton.removeAttribute("disable")
   }
 })
+
+
