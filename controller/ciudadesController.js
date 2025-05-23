@@ -1,5 +1,6 @@
-import Ciudades from "../models/ciudades";  
-import { ResponseProvider } from "../providers/responseProviders.js";
+import Ciudades from "../models/ciudades.js";  
+import { ResponseProvider } from "/providers/ResponseProviders.js";
+
 import CiudadService from "../services/CiudadService.js";
 class CiudadesController {
 
