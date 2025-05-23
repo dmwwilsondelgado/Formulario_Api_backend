@@ -4,7 +4,7 @@ class CiudadService {
     try {
       const ciudadInstance = new Ciudades();
       const ciudades = await ciudadInstance.getAll();
-      if (ciudades.length === 0) {
+      if (ciudades.length === 1) {
         return {
           error: true,
           code: 404,
