@@ -60,14 +60,25 @@ class CiudadesController {
   };
 
   static updateCiudades = async (req, res) => {
-    const { id_ciudades } = req.params;
+    const { id_ciudad } = req.params;
     const { nombre_ciudades } = req.body;
+
+    console.log("ID recibido:", id_ciudad);
+    console.log("Nombre recibido:", nombre_ciudades);
+
     try {
-      const OBJCiudades = new Ciudades();
-      const ciudades = await OBJCiudades.update(nombre_ciudades, id_ciudades);
-      res.status(201).json(ciudades);
+      const ciudadInstance = new Ciudades();
+      const result = await ciudadInstance.update(nombre_ciudades, id_ciudad);
+      res.status(200).json({
+        success: true,
+        message: "Ciudad actualizada",
+        data: result,
+      });
     } catch (error) {
-      res.status(500).json({ error: error.message });
+      res.status(500).json({
+        success: false,
+        message: error.message,
+      });
     }
   };
 

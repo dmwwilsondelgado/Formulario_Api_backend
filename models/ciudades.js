@@ -57,27 +57,62 @@ class Ciudades {
   }
 
   async updateParcial(campos, id_ciudades) {
+    // try {
+    //   let sql = "UPDATE Ciudades SET ";
+    //   for (let cont = 0; cont < Object.keys(campos).length; cont++) {
+    //     let value = Object.keys(campos)[cont];
+    //     sql += `${value} = '${campos[value]}'`;
+    //     if (cont == Object.keys(campos).length - 1) {
+    //       sql += "";
+    //     } else {
+    //       sql += ",";
+    //     }
+    //   }
+    //   sql += ` WHERE id_ciudades = ${id_ciudades}`;
+    //   const [result] = await connection.query(sql);
+    //   if (result.affectedRows === 0) {
+    //     throw new Error("Ciudad no encontrada");
+    //   }
+    //   return { mensaje: "Ciudad Actualizada" };
+    // } catch (error) {
+    //   console.error("Error real:", error); // Añade esto
+    //   throw new Error("ERROR: Al Actualizar la Ciudad parcialmente");
+    // }
     try {
       let sql = "UPDATE Ciudades SET ";
-      for (let cont = 0; cont < Object.keys(campos).length; cont++) {
-        let value = Object.keys(campos)[cont];
-        sql += `${value} = '${campos[value]}'`;
-        if (cont == Object.keys(campos).length - 1) {
-          sql += "";
-        } else {
-          sql += ",";
+      const keys = Object.keys(campos);
+
+      // Validar que sí se envió al menos un campo
+      if (keys.length === 0) {
+        throw new Error("No se enviaron campos para actualizar.");
+      }
+
+      for (let i = 0; i < keys.length; i++) {
+        let key = keys[i];
+        let value = campos[key];
+        sql += `${key} = '${value}'`;
+        if (i < keys.length - 1) {
+          sql += ", ";
         }
       }
+
       sql += ` WHERE id_ciudades = ${id_ciudades}`;
+
+      console.log("Consulta generada:", sql); // 👈🏼 VERIFICACIÓN
+
       const [result] = await connection.query(sql);
       if (result.affectedRows === 0) {
         throw new Error("Ciudad no encontrada");
       }
+
       return { mensaje: "Ciudad Actualizada" };
     } catch (error) {
+      console.error("Error real:", error); // 👈🏼 LOG REAL
       throw new Error("ERROR: Al Actualizar la Ciudad parcialmente");
     }
   }
+
+  
 
   async relacionadaConUsuarios(id_ciudades) {
     const [usuarios] = await connection.query(

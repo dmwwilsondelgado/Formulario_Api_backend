@@ -7,9 +7,9 @@ const router = express.Router();
 router.get('/', CiudadesController.getAllCiudades);
 
 // aca el crud 
-router.get('/:id', CiudadesController.getCiudadById);
-router.post('/', CiudadesController.createCiudades);
-router.put('/:id_ciudad', CiudadesController.updateCiudades);
+router.get('/:id', CiudadesController.getCiudadById);//lISSTO
+router.post('/', CiudadesController.createCiudades);// LSITO
+router.put('/:id_ciudad', CiudadesController.updateCiudades);//LISTO
 router.patch('/:id_ciudad', CiudadesController.updateParcialCiudades);
 router.delete('/:id_ciudad', CiudadesController.deleteCiudades);
 
