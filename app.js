@@ -1,14 +1,20 @@
 import express from "express";
 import bodyParser from "body-parser";
 
-// import categoriasRoutes from "./routes/categoriaRoutes.js";
-// import productosRoutes from "./routes/productoRoutes.js";
+
+// importamos el crud 
+import ciudadesRoutes from "./routes/ciudadesRoutes";
+import generoRoutes from "./routes/generosRoutes.js";
+import lenguajesRoutes from "./routes/lenguajesRoutes.js";
+import usuariosRoutes from "./routes/usuariosRoutes.js";
 
 const app = express();
-
 app.use(bodyParser.json());
-
 app.use(express.urlencoded({ "extended": true }));
+
+
+//inicializamos el app 
+app.use("/ciudades",ciudadesRoutes);
 
 // app.use("/categorias", categoriasRoutes);
 // app.use("/productos", productosRoutes);
