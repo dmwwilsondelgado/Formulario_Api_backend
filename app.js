@@ -14,7 +14,8 @@ app.use(express.urlencoded({ "extended": true }));
 
 
 //inicializamos el app 
-app.use("/ciudades",ciudadesRoutes);
+
+app.use("/ciudades", ciudadesRoutes);
 app.use("/generos", generoRoutes);
 app.use("/lenguajes", lenguajesRoutes);
 app.use("/usuarios", usuariosRoutes)

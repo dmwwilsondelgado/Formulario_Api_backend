@@ -14,3 +14,4 @@ router.patch('/:id_ciudad', CiudadesController.updateParcialCiudades);
 router.delete('/:id_ciudad', CiudadesController.deleteCiudades);
 
 
+export default router;

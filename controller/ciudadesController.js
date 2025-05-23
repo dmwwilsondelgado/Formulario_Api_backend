@@ -1,4 +1,6 @@
-
+import Ciudades from "../models/ciudades";  
+import { ResponseProvider } from "../providers/responseProviders.js";
+import CiudadService from "../services/CiudadService.js";
 class CiudadesController {
 
   static getAllCiudades = async (req, res) => {
