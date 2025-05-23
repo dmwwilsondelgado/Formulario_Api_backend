@@ -58,7 +58,7 @@ class CiudadesController {
       ResponseProvider.error(res, "ERROR: AL INTERNO DEL SERVIDOR", 500);
     }
   };
-
+  
   static createCiudades = async(req,res) => {
     try {
       const { nombre_ciudad } = req.body;
